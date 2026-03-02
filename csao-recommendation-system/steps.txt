@@ -1,0 +1,6 @@
+Generate the dataset: Run python src/generate_dataset.py to create the synthetic data files (users.csv, restaurants.csv, items.csv, orders.csv, interactions.csv) in the data/ folder.
+Preprocess the data: Run python src/preprocess.py to engineer features and prepare the data for training (outputs features.npy and labels.npy).
+Train the model: Run python src/train_model.py to train the LSTM model and save it as lstm_model.pth in the models/ folder.
+Evaluate the model: Run python src/evaluate.py to compute offline metrics on the holdout set and generate results (as in evaluation_results.md).
+Run inference: Use python src/inference.py --user_id <id> --restaurant_id <id> --current_cart "<item_ids>" for real-time predictions.
+Demo the UI (optional): After training, launch the lightweight Gradio UI with python app/demo_ui.py to interactively test the model, or the Streamlit app with streamlit run app/meal_readiness_app.py for meal completeness features.
