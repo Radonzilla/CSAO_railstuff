@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from sklearn.preprocessing import LabelEncoder
 import argparse
-from src.preprocess import get_cart_features  # Assume preprocess.py is in src/
+from .preprocess import get_cart_features  # Assume preprocess.py is in src/
 
 # Load data for encoding and features
 users = pd.read_csv('data/users.csv')
@@ -87,4 +87,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     suggestions = infer(args.user_id, args.restaurant_id, args.current_cart)
+
     print(f"Suggested add-ons: {suggestions}")
