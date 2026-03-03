@@ -104,4 +104,4 @@ for epoch in range(15):
     print(f"Epoch {epoch+1}/15 - Loss: {total_loss/len(train_loader):.4f}")
 
 torch.save(model.state_dict(), 'models/lstm_model.pth')
-print("Model saved to models/lstm_model.pth ✅")
+print("Model saved to models/lstm_model.pth ")
